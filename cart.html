@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Coffee</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@300&family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lexend+Mega&family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+        <link rel="stylesheet" href="css/flaction.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+    .xx{
+      background-color: transparent !important;
+      font-size: 35px !important;
+    }
+        </style>
+    </head>
+    <body>
+        <!------------------------------------------ Navbar ---------------------------------------------------------->
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark ">
+            <div class="container">
+                <a href="#" class="navbar-brand"><strong>COFFEE</strong><small>BLEND</small></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapseNavbar"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="collapseNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Servives</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle x" data-toggle="dropdown">Product<span class="dropdown-toggle-icon"></span></a>
+                    <div class="dropdown-menu bg-dark">
+                        <a href="shop.html" class="dropdown-item text-dark">Product List</a>
+                        <a href="cart.html" class="dropdown-item x text-dark">Cart</a>
+                        <a href="checkout.html" class="dropdown-item text-dark">Checkout</a>
+                    </div>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><button type="button" class="btn cart" data-toggle="modal" data-target="#cart">
+                      <a href="cart.html" class="cart"><i class="fa fa-cart-plus" style="color:orange !important; font-size: 25px;"></i> <span class="total-count"></span></a> 
+                   </button>
+                   </li>
+                </ul>
+                </div>
+            </div>
+        </nav> 
+    
+    
+        <!------------------------------------------------------- Carousel ------------------------------------------------>
+ <div id="slide" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel- active">
+        <img src="img/slide31.jpg" alt="" style="width: 100% !important;">
+        <div class="carousel-caption">
+          <h1 >Cart</h1>
+          <p class="mb-5 pb-5"><a href="index.html" class="text-white">Home</a> | <a href="cart.html" class="text-white">Cart</a></p>
+           
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document" >
+        <div class="modal-content">
+          <div class="modal-header" >
+            <h5 class="modal-title text-dark" id="exampleModalLabel">Sign Up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+
+              <form action="/action_page.php" class="needs-validation" novalidate>
+                <div class="form-group cartemail">
+                  <label for="uname">Email:</label>
+                  <input type="email" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group cartpass">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" required> Remember me.
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: red ; border: none;">Close</button>
+            <button type="button" class="btn btn-primary"style="background-color: #C39B63 ; border: none;">Order now</button>
+          </div> 
+        </div>
+      </div>
+    </div> 
+    <section class="coffee_seller">
+  
+      <div class="container mt-5 mb-5">
+
+          <div class="modal-content" style="background-color: #101011;">
+          
+            <div class="modal-body">
+             
+              <table class="show-cart table table-sm">
+                
+              </table>
+           
+                        </div>
+            <div class="modal-footer">
+              <button class="clear-cart btn btn-danger">Clear Cart</button>
+              <button type="button" class="btn btn-primary ordn " data-toggle="modal" data-target="#cart">Order now</button>
+              </div>
+  
+            </div>
+        
+  
+        </div>
+        
+      </div> 
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-md-3 p-3  mt-3 mr-3 ml-3 mb-3 border">
+          <div class="cart-total mb-3">
+          <h3 class="text-white mb-4">Cart Totals</h3>
+        
+         
+          <div class="border-bottom mb-3"></div>
+          <p class="d-flex">
+          <span class="text-white">Total</span>
+          <div class="text-white">Total price: $<span class="total-cart"></span></div>
+  
+          </p>
+          <a href="checkout.html" class="btn btn1 checkout_btn  text-center px-4">Proceed to Checkout</a>
+        
+          </div>
+          
+          </div>
+          
+          </div>
+      </div>
+      </section>
+
+    <!----------------------------------------------- Coffee Sellers --------------------------------------------------->
+     <section class="coffee_seller">
+        <div class="container">
+               <h3 class="text-center   c_s_p animated fadeInUp" style="animation-delay: 1s">Discover</h3>
+            <h2 class="text-center animated fadeInUp" style="animation-delay: 1s">RELATED PRODUCTS</h2>
+            <p class="text-center mt-4 mb-5">Far far away, behind the word mountains, far from the countries Vokalia and<br> Consonantia, there live the blind texts.</p>
+        
+            <div class="row justify-content-center pb-3">
+              <div class="col-md-3 mb-4">
+                <a href="singleproductcoffee2.html"><img src="img/menu-1.jpg" class="img-fluid"></a>
+                   <div class="text text-center pt-4">
+                     <h5 class="mb-3">COFFEE1</h5>
+                <p class="c_s_text">A small river named Duden flows<br> by their place and supplies</p>
+                <div class="card-block">
+                  <p class="c_s_price">$2.50</p>
+                  <a href="#" data-name="COFFEE1" data-price="2.50" class="add-to-cart btn btn-primary btnadd">Add to cart</a>
+                </div>
+                   </div>
+              </div>
+               <div class="col-md-3 mb-4">
+                <a href="singleproductcoffee1.html"> <img src="img/menu-2.jpg" class="img-fluid" ></a>
+                       <div class="text text-center pt-4">
+                     <h5 class="mb-3">COFFEE2</h5>
+                <p class="c_s_text">A small river named Duden flows<br> by their place and supplies</p>
+                <p class="c_s_price">$5.00</p>
+                <a href="#" data-name="COFFEE2" data-price="5.00" class="add-to-cart btn btn-primary btnadd">Add to cart</a>
+        </div>
+              </div>
+               <div class="col-md-3 mb-4">
+                <a href="singleproductcoffee3.html"><img src="img/menu-3.jpg" class="img-fluid"></a>
+                      <div class="text text-center pt-4">
+                     <h5 class="mb-3">COFFEE3</h5>
+                <p class="c_s_text">A small river named Duden flows<br> by their place and supplies</p>
+                <p class="c_s_price">$4.50</p>
+                <a href="#" data-name="COFFEE3" data-price="4.50" class="add-to-cart btn btn-primary btnadd">Add to cart</a>
+              </div>
+              </div>
+               <div class="col-md-3 ">
+                <a href="singleproductcoffee4.html"><img src="img/menu-4.jpg" class="img-fluid" ></a>
+                      <div class="text text-center pt-4">
+                     <h5 class="mb-3">COFFEE4</h5>
+                <p class="c_s_text">A small river named Duden flows<br> by their place and supplies</p>
+                <p class="c_s_price">$5.00</p>
+                <a href="#" data-name="COFFEE4" data-price="5.00" class="add-to-cart btn btn-primary btnadd">Add to cart</a>
+              </div>
+              </div>
+            </div>
+        </div>
+    </section> 
+   
+    
+    <!---------------------------------------------------------------- Footer ---------------------------------------------->
+<footer class="footer_section">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3 about_us">
+            <h4 class="mb-4 text-white">ABOUT US</h4>
+            <P>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</P>
+            <div class="icon mt-5 pt-5" >
+            <i class=" mr-5 f_icon fa fa-twitter"></i>
+            <i class=" mr-5 f_icon fa fa-facebook"></i>
+            <i class=" f_icon fa fa-instagram"></i>
+          </div>
+          </div>
+          <div class="col-md-4 " >
+            <h4 class="mb-4 text-white" >RECENT BLOG</h4>
+            <div class="row mb-3">
+              <div class="col-md-4">
+            <img src="img/image_1f.jpg" class="img-fluid">
+          </div>
+          <div class="col-md-8 recent_blog">
+            <a href="#">Even the all-powerful Pointing has no control about</a>
+            <div class="d-flex justify-content-between f_r_b">
+              <div ><i class="fa fa-calendar"></i> Sept 15, 2018</div>
+              <div><i class="fa fa-user"></i> Admin</div>
+              <div><i class="fa fa-comment"></i> 19</div>
+            </div>
+          </div>
+          </div>
+                 <div class="row">
+              <div class="col-md-4">
+            <img src="img/image_2f.jpg" class="img-fluid">
+          </div>
+          <div class="col-md-8 recent_blog">
+            <a href="#">Even the all-powerful Pointing has no control about</a>
+              <div class="d-flex justify-content-between f_r_b">
+              <div><i class="fa fa-calendar"></i> Sept 15, 2018</div>
+              <div><i class="fa fa-user"></i> Admin</div>
+              <div><i class="fa fa-comment"></i> 19</div>
+            </div>
+          </div>
+          </div>
+        </div>
+          <div class="col-md-2 servive">
+            <h4 class="mb-4 text-white" >SERVICES</h4>
+            <ul class="list-unstyled">
+              <li class="mb-4"><a href="#">Deliver</a></li>
+              <li class="mb-4"><a href="#">Quailty Foods</a></li>
+              <li class="mb-4"><a href="#">Mixed</a></li>
+              <li ><a href="#">Cooked</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4 class="mb-4 text-white">HAVE A QUESTIONS?</h4>
+            <ul class="list-unstyled">
+              <li  class="mb-4">
+                <span class="fa fa-map-marker"></span>
+                <span class="location ">  203 Fake St. Mountain View, San Francisco, California, USA</span>
+              </li>
+              <li  class="mb-4 pt-2 pb-2">
+                <span class="fa fa-phone"></span>
+                <a href="#">+2 392 3929 210</a>
+              </li>
+                <li>
+                <span class="fa fa-envelope"></span>
+                  <a href="#" >info@yourdomain.com</a>
+                </li>
+            </ul>
+          </div>
+        <div class="col-md-12 text-center mt-5 pt-4">
+    <p class="text-white pb-3">
+    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved.
+    </p>
+      </div>
+    </div>
+    </div>
+    </footer>
+    <script src="javascript/index.js"></script>
+    <script>
+      // Disable form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Get the forms we want to add validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+
+    </body>
+    </html>
